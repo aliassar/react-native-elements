@@ -184,7 +184,7 @@ class Tooltip extends React.PureComponent {
           transparent
           onDismiss={onClose}
           onShow={onOpen}
-          onRequestClose={onClose}
+          onRequestClose={this.toggleTooltip}
         >
           <TouchableOpacity
             style={styles.container(withOverlay)}
