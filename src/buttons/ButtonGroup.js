@@ -43,6 +43,7 @@ const ButtonGroup = props => {
     disabledTextStyle,
     disabledSelectedStyle,
     disabledSelectedTextStyle,
+    isSelectedColor,
     ...attributes
   } = rest;
 
@@ -125,7 +126,7 @@ const ButtonGroup = props => {
                   styles.textContainer,
                   buttonStyle && buttonStyle,
                   isSelected && {
-                    backgroundColor: theme.colors.primary,
+                    backgroundColor: isSelectedColor || theme.colors.primary,
                   },
                   isSelected && selectedButtonStyle && selectedButtonStyle,
                   isDisabled && styles.disabled,
